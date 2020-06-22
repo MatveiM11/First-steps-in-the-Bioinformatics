@@ -1,0 +1,81 @@
+while True:
+
+    print("What type of the data you want to process?")
+    A = input("")
+    if A == "RNA":
+          print("What you want to do with RNA?")
+          break
+
+    if A == "DNA":
+          print("What you want to do with DNA")
+          break
+
+
+
+    else:
+         print("Nope") #TF2 references
+         continue
+
+
+while A == "RNA":
+    X = input("")
+    if X == "RNA to Protein":
+     print("Input RNA")
+     import ptranslation #Written by myself module for RNA translation
+     RNA_translation = input("")
+     print (RNA_translation)
+     break
+    if X == "RNA to DNA":
+     print("Input RNA")
+     RNA_seq = input("")
+     DNA_seq  = RNA_seq.replace("U", "T")
+     print (DNA_seq)
+     break
+    if X == "RNA Length":
+     print ("Input RNA")
+     RNA = input("")
+     RNAo = int (len(RNA)//2)
+     print(RNAo)
+     break
+    if X == "RNA Splicing":
+     print ("Input RNA")
+     import re
+     RNA = input("")
+     regex = r"GU(?:\w{0,}?)AG" #regex black magic Uga-Buga, still need to undestand it better
+     exons = re.sub(regex, '', RNA)
+     print(exons)
+    if X == ("RNA nucleotides ratio"):
+     print("Input RNA")
+     RNAn = input ("")
+     X = (RNAn.count("A")) + (RNAn.count("U")) + (RNAn.count("C")) + (RNAn.count ("G"))
+     A = (RNAn.count("A")/X)
+     U = (RNAn.count("U")/X)
+     G = (RNAn.count("G")/X)
+     C = (RNAn.count("C")/X)
+     print ("A =", A, "U =", U, "G =", G, "C =", C)
+     break
+
+while A == "DNA":
+    Y = input("")
+    if Y == "DNA to RNA":
+     print ("Input DNA ")
+     DNA_seq = input("")
+     RNA_seq  = DNA_seq.replace("T", "U")
+     print (RNA_seq)
+     break
+    if Y == ("DNA length"):
+        print("Input DNA")
+        DNA = input("")
+        DNAo = int (len(DNA)//2)
+        print(DNAo)
+        break
+    if Y == ("DNA nucleotides ratio"):
+        print("Input DNA")
+        DNAn = input ("")
+        X = (DNAn.count("A")) + (DNAn.count("T")) + (DNAn.count("C")) + (DNAn.count ("G"))
+        A = (DNAn.count("A")/X)
+        T = (DNAn.count("T")/X)
+        G = (DNAn.count("G")/X)
+        C = (DNAn.count("C")/X)
+        print ("A =", A, "T =", T, "G =", G, "C =", C)
+        break
