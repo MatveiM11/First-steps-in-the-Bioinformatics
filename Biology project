@@ -98,3 +98,4 @@ while A == "DNA":
       print("NOPE! Input correct option!")
       continue
       break
+#psyhological support in process of  the coding - M.Kashtanov
