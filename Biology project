@@ -44,6 +44,7 @@ while A == "RNA":
      regex = r"GU(?:\w{0,}?)AG" #regex black magic Uga-Buga, still need to undestand it better
      exons = re.sub(regex, '', RNA)
      print(exons)
+     break
     if X == ("RNA nucleotides ratio"):
      print("Input RNA")
      RNAn = input ("")
@@ -54,6 +55,15 @@ while A == "RNA":
      C = (RNAn.count("C")/X)
      print ("A =", A, "U =", U, "G =", G, "C =", C)
      break
+    if X == ("RNAi"):
+        print("Input RNA")
+        N = input("")
+        print(N.translate(str.maketrans({"A": "U", "G": "C", "U": "A", "C": "G"})))
+        break
+    else:
+      print("NOPE! Input correct option!")
+      continue
+      break
 
 while A == "DNA":
     Y = input("")
@@ -79,3 +89,12 @@ while A == "DNA":
         C = (DNAn.count("C")/X)
         print ("A =", A, "T =", T, "G =", G, "C =", C)
         break
+    if Y == ("Complimentary DNA chain"):
+        print("Input DNA")
+        Nd = input("")
+        print(Nd.translate(str.maketrans({"A": "T", "G": "C", "T": "A", "C": "G"})))
+        break
+    else:
+      print("NOPE! Input correct option!")
+      continue
+      break
