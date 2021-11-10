@@ -1,3 +1,5 @@
+#Сделали - Матвей Мочалов(https://github.com/MatveiM11) и Митя Каштанов(https://github.com/duoapassivist)
+
 # sequence.fasta 
 get = input("Введите полное имя файла: ") # В файле должна быть только одна последовательность мРНК 
 gene = open(get, 'r') 
